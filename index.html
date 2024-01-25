@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="top">
+        <div class="logo">
+            <img id="logo" src="images/logo.png" alt="LOGO">
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li class="items">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">HOME</span>
+                    </a>
+                </li>
+                <li class="items">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <span class="text">GROZS</span>
+                    </a>
+                </li>
+                <li class="items">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="text">KONTAKTI</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="top2">
+        <div class="menu">
+            <button class="button1 active" id="b1" onclick="createMenuItems(ProduktuItems, event)">Produkti</button>
+            <button class="button2" id="b2" onclick="createMenuItems(PakalpojumuItems, event)">Pakalpojumi</button>
+        </div>
+        <div class="sub-menu">
+            <ul id="menuList"></ul>
+        </div>
+        <div class="image">
+            <img src="images/phone.jpg" alt="PHONE">
+            <div class="txt">Unbox your phone</div>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div class="container">
+            <section class="news">
+                <div class="header">
+                    <h2>Jaunumi</h2>
+                    <a href="">Skatīt visus jaunumus ></a>
+                </div>
+                <div class="body">
+                    <article>
+                        <a href="">
+                            <div class="image">
+                                <img src="images/vr.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>Iepazīsties ar nākotnes vizuālo tehnoloģiju <i>Apple vision pro</i></h3>
+                                <p></p>
+                            </div>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="">
+                            <div class="image">
+                                <img src="images/rabbit.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>2024.gadā atklāts 199$ vērtais <em>Rabbit R1</em> AI kabatas biedrs</h3>
+                                <p></p>
+                            </div>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="">
+                            <div class="image">
+                                <img src="images/flipper-zero.webp" alt="">
+                            </div>
+                            <div class="text">
+                                <h3>Drošības uzlabošana ar <i>Flipper Zero</i> - iepazīstieties ar daudzfunkcionālo kiberdrošības rīku</h3>
+                                <p></p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+            <section class="aksesuari">
+                <div class="header">
+                    <h2>Aksesuāri</h2>
+                    <a href="">Skatīt visus aksesuārus ></a>
+                </div>
+                <div class="body content">
+                    <article>
+                        <a href="">
+                            <div class="image">
+                                <img src="images/screen.webp" alt="">
+                            </div>
+                        </a>
+                        <div class="text">
+                            <p class="cena">2,99 €</p>
+                            <h3>iPhone 15 Privacy Screen Guard</h3>
+                            <p>Ekrāna aizsargs, kas izgatavots no <span class="read-more">pārstrādātiem materiāliem <b>(rPET) un ir 100% pārstrādājams</b>, nekompromitējot aizsardzību un kvalitāti.</span></p>
+                            <span class="read-more-btn">Lasīt vairāk...</span>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="">
+                            <div class="image">
+                                <img src="images/charger.webp" alt="">
+                            </div>
+                        </a>
+                        <div class="text">
+                            <p class="cena">5,99 €</p>
+                            <h3>USB C Charger ar 18 W jaudu un Type-C uz Lightning 2M kabeli</h3>
+                            <p>Ātrs un efektīvs lādētāja komplekts ideāli <span class="read-more"> piemērots iPhone un citu saderīgu ierīču lādēšanai. Lādētājs ir aprīkots ar ātrdarbīgu <b>18 W USB-C portu</b>, nodrošinot ātru uzlādi.</span></p>
+                            <span class="read-more-btn">Lasīt vairāk...</span>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="">
+                            <div class="image">
+                                <img src="images/band.webp" alt="">
+                            </div>
+                        </a>
+                        <div class="text">
+                            <p class="cena">1,99 €</p>
+                            <h3>Oranža silikona pulksteņa siksna</h3>
+                            <p>Pulksteņa siksna piedāvās ērtību un izturību.<span class="read-more"> Ar ātrās atbrīvošanas mehānismu varēsiet ātri un vienkārši nomainīt siksnu, pielāgojot to atbilstoši savam stila priekšroku un apģērbam.</span></p>
+                            <span class="read-more-btn">Lasīt vairāk...</span>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="">
+                            <div class="image">
+                                <img src="images/stabilizators.png" alt="">
+                            </div>
+                        </a>
+                        <div class="text">
+                            <p class="cena">9,99 €</p>
+                            <h3>DJI Osmo Mobile 6, melna - Stabilizators</h3>
+                            <p>Šis inovatīvais stabilizators piedāvā plašas <span class="read-more">iespējas radošai un stabilai video filmēšanai, vienlaikus nodrošinot lielisku mobilitāti un ērtu glabāšanu.</span></p>
+                            <span class="read-more-btn">Lasīt vairāk...</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="panel">
+                 <div class="forms">
+                    <div class="card">
+                        <div class="header"><h2>Izveidojiet dāvanu karti</h2></div>
+                        <form id="form1" action="https://www.w3schools.com/action_page.php" method="POST">
+                            <div class="inputs">
+                                <div class="state">
+                                    <label for="name">Saņēmēja vārds:</label>
+                                    <input type="text" name="Name" id="name" placeholder="vārds">
+                                    <div class="error"></div>
+                                </div>
+                                <div class="state">
+                                    <label for="summa">Summa:</label>
+                                    <input type="text" name="Summa" id="summa" placeholder="12345">
+                                    <div class="error"></div>
+                                </div>
+                                <button>Pievienot grozam</button>
+                            </div>
+                             
+                        </form>
+                    </div>
+                    <div class="subscribe">
+                        <div class="header"><h2>Abonējiet</h2></div>
+                        <form id="form2" action="https://www.w3schools.com/action_page.php" method="POST">
+                            <div class="inputs">
+                                <div class="state">
+                                    <label for="email">e-pasts:</label>
+                                    <input type="text" name="email" id="email" placeholder="example@example.com">
+                                    <div class="error"></div>
+                                </div>
+                                <button>Iesniegt</button>
+                            </div>
+                        </form>
+                    </div>
+                 </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div>
+            <div class="informacija"></div>
+            <div class="pakalpojumi"></div>
+            <div class="kontakti"></div>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
